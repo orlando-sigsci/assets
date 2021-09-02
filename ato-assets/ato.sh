@@ -44,7 +44,7 @@ while read -r _PASS; do
     ((i=i+1))
 
     ## Feedback for user
-    echo "[i] Trying: ${_USER} // ${_PASS}"
+    echo "[${i}] Trying: ${_USER} // ${_PASS}"
 
     ## Connect to server
     #CSRF=$( curl -s -c /tmp/dvwa.cookie "${URL}/login.php" | awk -F 'value=' '/user_token/ {print $2}' | awk -F "'" '{print $2}' )
